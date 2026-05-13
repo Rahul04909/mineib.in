@@ -1,3 +1,33 @@
+<?php
+// Output Caching using Predis to significantly improve load times
+require __DIR__ . '/vendor/autoload.php';
+
+$redisConfig = [
+    'scheme' => 'tcp',
+    'host'   => '127.0.0.1',
+    'port'   => 6379,
+];
+
+try {
+    $redis = new Predis\Client($redisConfig);
+    
+    // Generate a unique cache key based on the URI
+    $cacheKey = 'mineib_page_cache_' . md5($_SERVER['REQUEST_URI']);
+    
+    // Check if we have a cached version
+    if ($redis->exists($cacheKey)) {
+        echo $redis->get($cacheKey);
+        echo "\n<!-- Served blazing fast from Redis Cache -->";
+        exit;
+    }
+} catch (Exception $e) {
+    // If Redis is down or not running, gracefully fallback to normal rendering
+    $redis = null;
+}
+
+// Start capturing all output
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,11 +73,25 @@
     <?php include 'includes/header.php'; ?>
 
     <main>
-        <section class="hero-section">
-            <span class="hero-tag">AI-Native Engineering Partner</span>
-            <h1 class="hero-title">Build, Run, and Evolve with AI—Without Losing Control</h1>
-        </section>
+        <?php include 'components/hero.php'; ?>
     </main>
 
 </body>
 </html>
+<?php
+// Get the captured HTML
+$htmlOutput = ob_get_clean();
+
+// Cache the HTML in Redis for 1 hour if Redis is available
+if (isset($redis)) {
+    try {
+        // Cache for 1 hour (3600 seconds)
+        $redis->setex($cacheKey, 3600, $htmlOutput);
+    } catch (Exception $e) {
+        // Ignore save errors
+    }
+}
+
+// Finally, output the HTML to the browser
+echo $htmlOutput;
+?>

@@ -1,21 +1,21 @@
 <?php
 /**
- * Ultimate Interactive Header for mineib.in
- * Precise replica of the NineHertz Hero + Header Architecture
+ * Professional AI Agency Header for mineib.in
+ * Refined structure with improved AI Box and Scoop Design
  */
 ?>
 <header class="main-header-wrapper">
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation Bar (Clean, No Border) -->
     <div class="header-top-nav">
         <div class="nav-container">
-            <!-- Left: Logo -->
+            <!-- Left: Brand Logo -->
             <div class="brand-side">
                 <a href="index.php">
                     <img src="assets/logo/mine-ib-logo.png" alt="Mine IB" class="main-logo">
                 </a>
             </div>
 
-            <!-- Center: Primary Menus -->
+            <!-- Center: Main Navigation -->
             <nav class="center-nav">
                 <ul class="nav-list">
                     <li class="nav-item">
@@ -36,7 +36,7 @@
                 </ul>
             </nav>
 
-            <!-- Right: Secondary Menus & CTA -->
+            <!-- Right: Secondary Nav & Contact Button -->
             <div class="right-nav-side">
                 <ul class="secondary-nav-list">
                     <li class="nav-item has-dropdown"><a href="#" class="nav-link muted">About Us <i class="chevron-down"></i></a></li>
@@ -46,12 +46,12 @@
                 </ul>
                 <a href="#" class="contact-button-nine">
                     Contact Us 
-                    <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-icon">
-                        <path d="M5.293 4.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L10.586 11H3a1 1 0 110-2h7.586l-4.293-4.293a1 1 0 010-1.414z" />
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                        <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
                 
-                <!-- Mobile Toggle -->
+                <!-- Mobile Trigger -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
                     <span></span>
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <!-- Hero Content Area (Still part of the white header) -->
+    <!-- Hero Content (Positioned higher) -->
     <div class="hero-content-wrapper">
         <div class="hero-text-container">
             <span class="promo-tag">AI-NATIVE ENGINEERING PARTNER</span>
@@ -71,48 +71,107 @@
         </div>
     </div>
 
-    <!-- Custom Bottom Design with AI Box -->
-    <div class="header-bottom-design">
-        <div class="cradle-scoop">
+    <!-- Professional SVG Curve & AI Search Box -->
+    <div class="svg-curve-wrapper">
+        <svg class="smooth-curve-svg" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="edgeGradient" x1="0" y1="0" x2="2880" y2="0" gradientUnits="userSpaceOnUse">
+                    <!-- First Cycle -->
+                    <stop offset="0%" stop-color="#e2e8f0"/>
+                    <stop offset="15%" stop-color="#e2e8f0"/>
+                    <stop offset="20%" stop-color="#3B82F6"/>
+                    <stop offset="25%" stop-color="#F97316"/>
+                    <stop offset="30%" stop-color="#3B82F6"/>
+                    <stop offset="35%" stop-color="#e2e8f0"/>
+                    <stop offset="50%" stop-color="#e2e8f0"/>
+                    <!-- Second Cycle (For continuous loop) -->
+                    <stop offset="65%" stop-color="#e2e8f0"/>
+                    <stop offset="70%" stop-color="#3B82F6"/>
+                    <stop offset="75%" stop-color="#F97316"/>
+                    <stop offset="80%" stop-color="#3B82F6"/>
+                    <stop offset="85%" stop-color="#e2e8f0"/>
+                    <stop offset="100%" stop-color="#e2e8f0"/>
+                    
+                    <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="-1440 0" dur="4s" repeatCount="indefinite" />
+                </linearGradient>
+            </defs>
+            
+            <!-- White Background Fill -->
+            <path d="M0 0 L340 0 C390 0, 400 90, 450 90 L990 90 C1040 90, 1050 0, 1100 0 L1440 0 L1440 -10 L0 -10 Z" fill="white"></path>
+            
+            <!-- Animated Gradient Stroke -->
+            <path d="M0 0 L340 0 C390 0, 400 90, 450 90 L990 90 C1040 90, 1050 0, 1100 0 L1440 0" fill="none" stroke="url(#edgeGradient)" stroke-width="2.5"></path>
+        </svg>
+        
+        <div class="ai-search-box-container">
             <div class="ai-search-box">
                 <div class="ai-box-left">
                     <div class="ai-icon-circle">
-                        <svg viewBox="0 0 24 24" fill="none" class="sparkle-icon">
-                            <path d="M12 2L14.85 8.35L21.5 9.35L16.7 14L17.85 20.6L12 17.5L6.15 20.6L7.3 14L2.5 9.35L9.15 8.35L12 2Z" fill="white"/>
-                        </svg>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="AI" style="width: 20px; height: 20px; filter: brightness(0) invert(1);">
                     </div>
                     <span class="ask-ai-text">Ask AI</span>
-                    <input type="text" placeholder="Build your" class="ai-input-field">
+                    <input type="text" placeholder="Ask about NineHertz se" class="ai-input-field">
                 </div>
                 <div class="ai-box-right">
-                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-                    </svg>
+                    <div class="search-icon-btn">
+                        <svg class="search-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- GSAP Animation Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const centerNav = document.querySelector('.center-nav');
-    const rightNav = document.querySelector('.secondary-nav-list');
+document.addEventListener("DOMContentLoaded", () => {
+    const title = document.querySelector(".main-hero-title");
+    if (title) {
+        // Create premium word-by-word reveal without paid plugins
+        const text = title.innerText.trim();
+        title.innerHTML = ""; // Clear existing text
+        
+        const words = text.split(" ");
+        words.forEach(word => {
+            const wordWrapper = document.createElement("span");
+            wordWrapper.style.display = "inline-block";
+            wordWrapper.style.overflow = "hidden";
+            wordWrapper.style.verticalAlign = "bottom";
+            wordWrapper.style.marginRight = "8px"; // Standard space width
+            
+            const innerSpan = document.createElement("span");
+            innerSpan.innerText = word;
+            innerSpan.style.display = "inline-block";
+            innerSpan.style.transform = "translateY(100%)"; // Start below
+            innerSpan.style.opacity = "0";
+            
+            wordWrapper.appendChild(innerSpan);
+            title.appendChild(wordWrapper);
+        });
 
-    mobileBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        // Handle mobile menu expansion
-    });
-
-    // Add scroll effect for sticky nav transition
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header-top-nav');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+        // Professional GSAP Timeline
+        const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+        
+        // 1. Fade up the promo tag
+        tl.fromTo(".promo-tag", 
+            { opacity: 0, y: 20 }, 
+            { opacity: 1, y: 0, duration: 1, delay: 0.1 }
+        )
+        // 2. Premium word reveal for the main title
+        .to(".main-hero-title span span", 
+            { opacity: 1, y: "0%", duration: 1.2, stagger: 0.04 },
+            "-=0.6" // Start slightly before promo tag finishes
+        )
+        // 3. Subtle float up for the search box
+        .fromTo(".ai-search-box-container",
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 1.2, ease: "back.out(1.2)" },
+            "-=0.8"
+        );
+    }
 });
 </script>
