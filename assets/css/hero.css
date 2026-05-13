@@ -5,7 +5,7 @@
 
 .hero-3d-wrapper {
     position: relative;
-    min-height: 85vh; /* Reduced height from bottom */
+    height: 70vh; /* Further reduced height from bottom */
     width: 100%;
     background: #000; /* Dark background to blend with Spline */
     overflow: hidden;
@@ -13,20 +13,22 @@
 
 .spline-bg-container {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh; /* Make it taller than the wrapper to push the logo down */
     z-index: 0;
     pointer-events: auto;
-    overflow: hidden;
 }
 
 /* Ensure the spline viewer takes full screen */
 .spline-bg-container spline-viewer {
     width: 100%;
-    height: 85vh; /* Match the reduced wrapper height */
+    height: 100%; /* Takes the 100vh height */
     display: block;
 }
 
-/* Hide the "Built with Spline" watermark */
+/* Hide the "Built with Spline" watermark (fallback) */
 .spline-bg-container spline-viewer::part(logo) {
     display: none !important;
 }

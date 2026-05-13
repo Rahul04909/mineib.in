@@ -7,13 +7,6 @@
 
 <div class="relative-hero-container">
     <div class="hero-3d-wrapper">
-        <div class="spline-bg-container">
-            <!-- Spline 3D Viewer Script -->
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/dJqTIQ-tE3ULUPMi/scene.splinecode"></spline-viewer>
-            <div class="spline-overlay"></div>
-        </div>
-
         <div class="hero-3d-content" id="hero3dContent">
             <div class="hero-content-inner">
                 <div class="hero-left-col">

@@ -66,7 +66,14 @@ ob_start();
             margin-bottom: 30px;
             font-weight: 700;
         }
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
     </style>
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="assets/css/reviews.css">
+    <link rel="stylesheet" href="assets/css/creative-services.css">
 </head>
 <body>
 
@@ -74,6 +81,8 @@ ob_start();
 
     <main>
         <?php include 'components/hero.php'; ?>
+        <?php include 'components/creative-services.php'; ?>
+        <?php include 'components/reviews.php'; ?>
     </main>
 
 </body>
