@@ -14,8 +14,13 @@ try {
     // Generate a unique cache key based on the URI
     $cacheKey = 'mineib_page_cache_' . md5($_SERVER['REQUEST_URI']);
     
+    // Manual flush mechanism
+    if (isset($_GET['flush'])) {
+        $redis->del($cacheKey);
+    }
+    
     // Check if we have a cached version
-    if ($redis->exists($cacheKey)) {
+    if ($redis->exists($cacheKey) && !isset($_GET['flush'])) {
         echo $redis->get($cacheKey);
         echo "\n<!-- Served blazing fast from Redis Cache -->";
         exit;
